@@ -1,19 +1,19 @@
 import React from 'react';
 import './Card.scss';
 
-const Card = props => {
+const Card = ({ monster }) => {
   return (
     <div className='card-container'>
-      <h2 className='card-name'> {props.monster.name} </h2>
+      <h2 className='card-name'> {monster.name} </h2>
       <img
         className='monster-img'
         alt='monster'
-        src={`https://robohash.org/${props.monster.id}?set=set2&size=180x180`}
+        src={`https://robohash.org/${monster.id}?set=set2&size=180x180`}
       />
-      <p> {props.monster.username} </p>
-      <p> {props.monster.email} </p>
-      <p> {props.monster.website} </p>
-      <span> {props.monster.id} </span>
+      <p> {monster.username} </p>
+      <p> {monster.email} </p>
+      <p> {monster.website} </p>
+      <span> {monster.id} </span>
     </div>
   );
 };

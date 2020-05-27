@@ -13,9 +13,9 @@ const App = () => {
       .then(users => setMonsters(users));
   }, []);
 
-  function onSearchChange(event) {
+  const onSearchChange = event => {
     setSearchFields(event.target.value);
-  }
+  };
 
   const filteredMonsters = monsters.filter(monster =>
     monster.name.toLowerCase().includes(searchField.toLowerCase())
@@ -24,7 +24,10 @@ const App = () => {
   return (
     <div className='App'>
       <h1 className='app-title'>Monsters Rolodex</h1>
-      <SearchBox onSearchChange={onSearchChange} />
+      <SearchBox
+        onSearchChange={onSearchChange}
+        placeholder='Search monsters...'
+      />
       <CardList monsters={filteredMonsters} />
     </div>
   );
