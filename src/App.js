@@ -8,6 +8,11 @@ const Title = styled.h1`
   margin: 32px 0 16px 0;
 `;
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const App = () => {
   const [monsters, setMonsters] = useState([]);
   const [searchField, setSearchFields] = useState("");
@@ -33,7 +38,13 @@ const App = () => {
         onSearchChange={onSearchChange}
         placeholder="Search monsters..."
       />
-      <CardList monsters={filteredMonsters} />
+      <Container>
+        {filteredMonsters.length > 0 ? (
+          <CardList monsters={filteredMonsters} />
+        ) : (
+          "Monster not found."
+        )}
+      </Container>
     </div>
   );
 };
