@@ -8,12 +8,7 @@ const Input = styled.input`
 
 const SearchBox = ({ onSearchChange, placeholder }) => {
   return (
-    <Input
-      className="search-box"
-      type="search"
-      placeholder={placeholder}
-      onChange={onSearchChange}
-    />
+    <Input type="search" placeholder={placeholder} onChange={onSearchChange} />
   );
 };
 
