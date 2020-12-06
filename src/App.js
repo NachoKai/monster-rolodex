@@ -1,7 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import SearchBox from "./components/SearchBox";
 import CardList from "./components/CardList";
+import styled from "styled-components";
 import "./App.scss";
+
+const Title = styled.h1`
+  margin: 32px 0 16px 0;
+`;
 
 const App = () => {
   const [monsters, setMonsters] = useState([]);
@@ -23,7 +28,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="app-title">Monsters Rolodex</h1>
+      <Title>Monsters Rolodex</Title>
       <SearchBox
         onSearchChange={onSearchChange}
         placeholder="Search monsters..."

@@ -1,10 +1,14 @@
-import React from "react";
+import styled from "styled-components";
+
+const Input = styled.input`
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 16px;
+`;
 
 const SearchBox = ({ onSearchChange, placeholder }) => {
-  //El estado del searchbox no se agrega acá, si no en app, por el one way dataflow, si pusieras el estado aca no tendria forma de que cardList lo lea. Esto se llama Lifting State Up
-
   return (
-    <input
+    <Input
       className="search-box"
       type="search"
       placeholder={placeholder}
