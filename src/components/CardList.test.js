@@ -10,20 +10,6 @@ const monstersMock = [
     email: "Sincere@april.biz",
     website: "test.com",
   },
-  {
-    id: 2,
-    name: "Leanne Graham",
-    username: "Bret",
-    email: "Sincere@april.biz",
-    website: "test.com",
-  },
-  {
-    id: 3,
-    name: "Leanne Graham",
-    username: "Bret",
-    email: "Sincere@april.biz",
-    website: "test.com",
-  },
 ];
 
 it("should render CardList component", async () => {

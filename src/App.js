@@ -18,9 +18,12 @@ const App = () => {
   const [searchField, setSearchFields] = useState("");
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then(response => response.json())
-      .then(users => setMonsters(users));
+    const fetchApi = async () => {
+      const res = await fetch("https://jsonplaceholder.typicode.com/users");
+      const resJson = await res.json();
+      setMonsters(resJson);
+    };
+    fetchApi();
   }, []);
 
   const onSearchChange = event => {
